@@ -42,7 +42,7 @@ public class ContratTest {
     private static final Logger l = LogManager.getLogger(ContratTest.class);
 
 
-	/*@Test
+	@Test
 	public void TestAjouterContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2021-10-07"); //date contrat 07 october 2021
@@ -94,7 +94,7 @@ public class ContratTest {
 		int contratId = employeServiceImpl.ajouterContrat(contrat);
 		Contrat updatedcontrat = icontratservice.getContratById(contratId);
 		assertThat(updatedcontrat.getSalaire()).isEqualTo(contrat.getSalaire());
-	}*/
+	}
 	@Test
 	public void testFindContratById() {
 		Contrat contrat = icontratservice.getContratById(7);
@@ -103,6 +103,6 @@ public class ContratTest {
 	@Test
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
-		assertThat(entreprises.size()).isGreaterThan(0);
+		assertThat(entreprises.size()).isPositive();
 	}
 }
