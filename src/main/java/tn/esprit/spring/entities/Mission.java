@@ -29,6 +29,9 @@ public class Mission implements Serializable {
 	@OneToMany(mappedBy="mission")
 	private  List<Timesheet> timesheets;
 	
+	@ManyToOne
+	private Societe societe;
+	
 	public Mission() {
 		super();
 	}
@@ -78,6 +81,15 @@ public class Mission implements Serializable {
 	public void setTimesheets(List<Timesheet> timesheets) {
 		this.timesheets = timesheets;
 	}
+
+	public Societe getSociete() {
+		return societe;
+	}
+
+	public void setSociete(Societe societe) {
+		this.societe = societe;
+	}
+	
 	
 	
 
