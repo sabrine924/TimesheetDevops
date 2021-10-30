@@ -9,11 +9,11 @@ pipeline{
                 git 'https://github.com/sabrine924/ProjetDevOps.git'
             }
          }        
-       stage('Build'){
-            steps{
-                sh 'mvn clean package'
-            }
-         }
+     //  stage('Build'){
+     //       steps{
+      //          sh 'mvn clean package'
+         //   }
+      //   }
         stage('SonarQube analysis') {
   //  def scannerHome = tool 'SonarQube';
         steps{
