@@ -5,7 +5,7 @@ git 'https://github.com/sabrine924/ProjetDevOps.git'
 stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarQube'
       withSonarQubeEnv('SonarQube') {
-      bat "${scannerHome}/bin/sonar-scanner" \
+      sh """/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner \
      -D sonar.projectVersion=1.0 \
        -D sonar.login=admin \
       -D sonar.password=Sonaresprit2021 \
