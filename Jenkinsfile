@@ -1,22 +1,29 @@
-node{
-   stage('clonning from GIT'){
-git 'https://github.com/sabrine924/ProjetDevOps.git'
-     }
-stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarQube'
-      withSonarQubeEnv('SonarQube') {
-      bat """/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner \
-     -D sonar.projectVersion=1.0 \
-       -D sonar.login=admin \
-      -D sonar.password=Sonaresprit2021 \
-      -D sonar.projectBaseDir=C:/Windows/system32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/TimesheetDevops@script/ \
-        -D sonar.projectKey=ProjetDevOps \
-        -D sonar.sourceEncoding=UTF-8 \
-        -D sonar.language=java \
-        -D sonar.sources=ProjetDevOps/src/test/java\tn/esprit/spring/test \
-        -D sonar.tests=ProjetDevOps/src/main/java/tn/esprit/springt \
-        -D sonar.host.url=http://localhost:9000/"""
+pipeline{
+    agent any
+    environment {
+        PATH = "$PATH:C:\Users\user\Desktop\apache-maven-3.8.1\bin"
+    }
+    stages{
+       stage('GetCode'){
+            steps{
+                git 'https://github.com/sabrine924/ProjetDevOps.git'
+            }
+         }        
+       stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+         }
+        stage('SonarQube analysis') {
+//    def scannerHome = tool 'SonarQube';
+        steps{
+        withSonarQubeEnv('SonarQube') { 
+        // If you have configured more than one global server connection, you can specify its name
+//      sh "${scannerHome}/bin/sonar-scanner"
+        sh "mvn sonar:sonar"
+    }
         }
-}
-
+        }
+       
+    }
 }
