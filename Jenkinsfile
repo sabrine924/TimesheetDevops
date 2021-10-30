@@ -4,8 +4,7 @@ git 'https://github.com/sabrine924/ProjetDevOps.git'
      }
 stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarQube'
-      withSonarQubeEnv('SonarQube') {
-     
+   withSonarQubeEnv('SonarQube') {}
      -D sonar.projectVersion=1.0 \
        -D sonar.login=admin \
       -D sonar.password=Sonaresprit2021 \
