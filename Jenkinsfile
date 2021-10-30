@@ -1,7 +1,6 @@
 node{
    stage('clonning from GIT'){
-git  branch: 'main',
-      credentialsId: 'MyGitHubCredentials'
+git  
       url:'https://github.com/sabrine924/ProjetDevOps.git'
      }
 
