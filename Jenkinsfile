@@ -13,8 +13,8 @@ stage('SonarQube Analysis') {
         -D sonar.projectKey=ProjetDevOps \
         -D sonar.sourceEncoding=UTF-8 \
         -D sonar.language=java \
-        -D sonar.sources=ProjetDevOps\src\test\java\tn\esprit\spring\test \
-        -D sonar.tests=ProjetDevOps\src\main\java\tn\esprit\spring \
+        -D sonar.sources=ProjetDevOps/src/test/java\tn/esprit/spring/test \
+        -D sonar.tests=ProjetDevOps/src/main/java/tn/esprit/spring \
         -D sonar.host.url=http://localhost:9000/"""
         }
     
