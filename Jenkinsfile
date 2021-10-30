@@ -5,7 +5,7 @@ git 'https://github.com/sabrine924/ProjetDevOps.git'
 stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarQube'
       withSonarQubeEnv('SonarQube') {
-      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar' \
      -D sonar.projectVersion=1.0 \
        -D sonar.login=admin \
       -D sonar.password=Sonaresprit2021 \
