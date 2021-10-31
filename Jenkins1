@@ -1,6 +1,16 @@
-node {
+pipeline{
 
 
+    agent any
+
+stages{
+
+
+       stage('GetCode'){
+          
+                git 'https://github.com/sabrine924/ProjetDevOps.git'
+            
+         }        
 stage('Checkout') {
         checkout scm
     }
@@ -8,4 +18,15 @@ stage('Checkout') {
     stage('Build'){
         sh "mvn clean install"
     }
+    
+    
+    
+    
     }
+    
+    
+    
+    
+    }
+    
+    
