@@ -1,32 +1,24 @@
 pipeline{
-
-
     agent any
-
-stages{
-
-
-       stage('GetCode'){
-          
-                git 'https://github.com/sabrine924/ProjetDevOps.git'
-            
-         }        
-stage('Checkout') {
-        checkout scm
+    environment {
+        PATH = "$PATH:C:/Users/user/Desktop/apache-maven-3.8.1/bin"
     }
+   stage("build & SonarQube analysis") {
+          node {
+              withSonarQubeEnv('SonarQube') {
+                 sh 'mvn clean package sonar:sonar'
+              }
+          }
+      }
 
-    stage('Build'){
-        sh "mvn clean install"
-    }
+      stage("Quality Gate"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+              if (qg.status != 'OK') {
+                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
+              }
+          }
+      }
     
-    
-    
-    
-    }
-    
-    
-    
-    
-    }
-    
+}
     
