@@ -28,7 +28,12 @@ pipeline{
    }
    stage('Email Notification ') {
      steps{
-          emailext(attachLog: true, body: 'This is the TimesheetProjet email ', subject: 'This is the TimesheetProjet email ', to: 'sabrine.hmidi@esprit.tn')
+          emailext(
+                   attachLog: true,
+                   body: 'This is the TimesheetProjet email ',
+                   subject: 'This is the TimesheetProjet email ',
+                   to: 'sabrine.hmidi@esprit.tn'
+                  )
          }
 }     
     
