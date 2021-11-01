@@ -40,5 +40,8 @@ public class MissionServiceImpl implements IMissionServiceImpl {
 	public void deleteMissionById(int missionId) {
 		missionRepository.delete(missionRepository.findById(missionId).get());	
 	}
-
+	
+	public void deleteAllMissionJPQL() {
+        missionRepository.deleteAllMissionJPQL();
+	}
 }

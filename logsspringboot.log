@@ -1,29 +1,163 @@
-2021-10-28 01:09:16.229  INFO 13172 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-10-28 01:09:16.234  INFO 13172 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-10-28 01:09:16.235  INFO 13172 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-28 01:09:16.238  INFO 13172 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-28 01:09:16.276  INFO 13172 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-28 22:49:37.024  INFO 12388 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-I5EKS09 with PID 12388 (C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1\target\classes started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
-2021-10-28 22:49:37.203  INFO 12388 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
-2021-10-28 22:49:39.056  INFO 12388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-10-28 22:49:39.238  INFO 12388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169ms. Found 6 repository interfaces.
-2021-10-28 22:49:39.923  INFO 12388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$63b0cbf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-10-28 22:49:41.199  INFO 12388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2021-10-28 22:49:41.264  INFO 12388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-28 22:49:41.265  INFO 12388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2021-10-28 22:49:42.278  INFO 12388 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
-2021-10-28 22:49:42.279  INFO 12388 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4936 ms
-2021-10-28 22:49:43.610  INFO 12388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-28 22:49:43.904  INFO 12388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-28 22:49:44.069  INFO 12388 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2021-11-01 22:26:30.367  INFO 22236 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-I5EKS09 with PID 22236 (C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1\target\classes started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-01 22:26:30.397  INFO 22236 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2021-11-01 22:26:32.447  INFO 22236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-01 22:26:32.619  INFO 22236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143ms. Found 6 repository interfaces.
+2021-11-01 22:26:33.127  INFO 22236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9347d38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-01 22:26:33.639  INFO 22236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2021-11-01 22:26:33.759  INFO 22236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-01 22:26:33.759  INFO 22236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-11-01 22:26:34.070  INFO 22236 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-11-01 22:26:34.071  INFO 22236 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3571 ms
+2021-11-01 22:26:34.427  INFO 22236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-01 22:26:34.986  INFO 22236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-01 22:26:35.084  INFO 22236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2021-10-28 22:49:44.295  INFO 12388 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2021-10-28 22:49:44.301  INFO 12388 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-10-28 22:49:45.023  INFO 12388 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-10-28 22:49:45.432  INFO 12388 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-10-28 22:49:50.869  INFO 12388 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-28 22:49:52.038  INFO 12388 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-10-28 22:49:53.887  INFO 12388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-28 22:49:54.045  WARN 12388 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-28 22:49:54.795  INFO 12388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path '/SpringMVC'
+2021-11-01 22:26:35.251  INFO 22236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-01 22:26:35.253  INFO 22236 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-01 22:26:35.610  INFO 22236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-01 22:26:36.142  INFO 22236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-01 22:26:39.208  INFO 22236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-01 22:26:40.149  INFO 22236 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-01 22:26:41.509  INFO 22236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-01 22:26:41.695  WARN 22236 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-01 22:26:42.214  INFO 22236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path '/SpringMVC'
+2021-11-01 22:26:42.216  INFO 22236 --- [main] SpringBootCoreDataJpaMvcRest1Application : Started TimesheetSpringBootCoreDataJpaMvcRest1Application in 12.932 seconds (JVM running for 14.326)
+2021-11-02 00:13:46.919  INFO 13112 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 13112 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:13:46.992  INFO 13112 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:13:48.578  INFO 13112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:13:48.727  INFO 13112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 6 repository interfaces.
+2021-11-02 00:13:49.260  INFO 13112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f109357] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:13:49.722  INFO 13112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:13:50.021  INFO 13112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:13:50.153  INFO 13112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:13:50.390  INFO 13112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:13:50.392  INFO 13112 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:13:50.899  INFO 13112 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:13:52.150  INFO 13112 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:13:55.896  INFO 13112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:13:56.480  INFO 13112 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:13:58.282  INFO 13112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:13:58.365  WARN 13112 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:13:59.113  INFO 13112 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 12.654 seconds (JVM running for 14.542)
+2021-11-02 00:13:59.999  INFO 13112 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:14:00.002  INFO 13112 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:14:00.005  INFO 13112 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:14:00.016  INFO 13112 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 00:24:33.093  INFO 16628 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 16628 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:24:33.094  INFO 16628 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:24:33.956  INFO 16628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:24:34.050  INFO 16628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 6 repository interfaces.
+2021-11-02 00:24:34.506  INFO 16628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c604f9e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:24:35.845  INFO 16628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:24:36.011  INFO 16628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:24:36.079  INFO 16628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:24:36.234  INFO 16628 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:24:36.240  INFO 16628 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:24:36.639  INFO 16628 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:24:37.390  INFO 16628 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:24:39.687  INFO 16628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:24:40.142  INFO 16628 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:24:41.530  INFO 16628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:24:41.614  WARN 16628 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:24:42.179  INFO 16628 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 9.841 seconds (JVM running for 10.71)
+2021-11-02 00:24:42.959  INFO 16628 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:24:42.965  INFO 16628 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:24:42.968  INFO 16628 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:24:42.975  INFO 16628 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 00:41:51.322  INFO 19876 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 19876 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:41:51.323  INFO 19876 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:41:52.292  INFO 19876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:41:52.415  INFO 19876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 6 repository interfaces.
+2021-11-02 00:41:52.856  INFO 19876 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$995485fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:41:53.111  INFO 19876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:41:53.285  INFO 19876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:41:53.357  INFO 19876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:41:53.522  INFO 19876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:41:53.524  INFO 19876 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:41:53.698  INFO 19876 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:41:54.164  INFO 19876 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:41:55.864  INFO 19876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:41:56.231  INFO 19876 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:41:57.441  INFO 19876 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:41:57.507  WARN 19876 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:41:57.923  INFO 19876 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 7.033 seconds (JVM running for 7.951)
+2021-11-02 00:41:58.880  INFO 19876 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:41:58.883  INFO 19876 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:41:58.891  INFO 19876 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:41:58.898  INFO 19876 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 00:49:27.788  INFO 8652 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 8652 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:49:27.789  INFO 8652 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:49:28.614  INFO 8652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:49:28.711  INFO 8652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 6 repository interfaces.
+2021-11-02 00:49:29.130  INFO 8652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$995485fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:49:29.354  INFO 8652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:49:29.503  INFO 8652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:49:29.571  INFO 8652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:49:29.729  INFO 8652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:49:29.732  INFO 8652 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:49:29.894  INFO 8652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:49:30.332  INFO 8652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:49:33.094  INFO 8652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:49:33.494  INFO 8652 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:49:34.836  INFO 8652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:49:35.284  WARN 8652 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:49:35.794  INFO 8652 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 8.519 seconds (JVM running for 9.682)
+2021-11-02 00:49:36.240  INFO 8652 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:49:36.242  INFO 8652 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:49:36.246  INFO 8652 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:49:36.288  INFO 8652 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 00:50:42.831  INFO 12100 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 12100 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:50:42.834  INFO 12100 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:50:43.912  INFO 12100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:50:44.016  INFO 12100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 6 repository interfaces.
+2021-11-02 00:50:44.705  INFO 12100 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$434befb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:50:45.076  INFO 12100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:50:45.309  INFO 12100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:50:45.385  INFO 12100 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:50:45.550  INFO 12100 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:50:45.552  INFO 12100 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:50:45.808  INFO 12100 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:50:46.286  INFO 12100 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:50:49.230  INFO 12100 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:50:50.021  INFO 12100 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:50:51.474  INFO 12100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:50:51.547  WARN 12100 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:50:52.045  INFO 12100 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 9.655 seconds (JVM running for 10.966)
+2021-11-02 00:50:52.391  INFO 12100 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:50:52.398  INFO 12100 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:50:52.401  INFO 12100 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:50:52.408  INFO 12100 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 00:52:42.167  INFO 19704 --- [main] tn.esprit.spring.test.MissionTest        : Starting MissionTest on DESKTOP-I5EKS09 with PID 19704 (started by lenovo in C:\Users\lenovo\Desktop\5SE3\devops\TimesheetDevops-CodeWithSonarup1)
+2021-11-02 00:52:42.168  INFO 19704 --- [main] tn.esprit.spring.test.MissionTest        : No active profile set, falling back to default profiles: default
+2021-11-02 00:52:43.018  INFO 19704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-02 00:52:43.118  INFO 19704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 6 repository interfaces.
+2021-11-02 00:52:43.563  INFO 19704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85b125e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-02 00:52:43.820  INFO 19704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 00:52:44.003  INFO 19704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 00:52:44.072  INFO 19704 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-02 00:52:44.227  INFO 19704 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-02 00:52:44.229  INFO 19704 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-02 00:52:44.382  INFO 19704 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-02 00:52:44.797  INFO 19704 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 00:52:47.111  INFO 19704 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:52:47.466  INFO 19704 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-02 00:52:48.618  INFO 19704 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:52:48.681  WARN 19704 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 00:52:49.094  INFO 19704 --- [main] tn.esprit.spring.test.MissionTest        : Started MissionTest in 7.277 seconds (JVM running for 8.439)
+2021-11-02 00:52:49.412  INFO 19704 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-02 00:52:49.420  INFO 19704 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 00:52:49.424  INFO 19704 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 00:52:49.445  INFO 19704 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
