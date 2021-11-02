@@ -28,17 +28,7 @@ pipeline{
                 
             }
         }   
- //  stage('Email Notification ') {
-  //   steps{
-      //    emailext(
-             //       to: 'hmidisabrine228@gmail.com' ,
-             //      subject: 'This is the TimesheetProjet email ',
-             //      body: 'job failure build '
-                
-                
-          //        )
-       //  }
-//}     
+    
     stage("Publish to Nexus Repository Manager") {
 
             steps {
@@ -107,6 +97,17 @@ pipeline{
             }
 
         }
+          stage('Email Notification ') {
+     steps{
+          emailext(
+                    to: 'hmidisabrine228@gmail.com' ,
+                   subject: 'This is the TimesheetProjet email ',
+                   body: 'job failure build '
+                
+                
+                )
+        }
+} 
  
     }
 }
