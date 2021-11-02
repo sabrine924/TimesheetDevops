@@ -29,10 +29,12 @@ pipeline{
    stage('Email Notification ') {
      steps{
           emailext(
-                   
-                   body: 'This is the TimesheetProjet email ',
+                    to: 'hmidisabrine228@gmail.com' ,
                    subject: 'This is the TimesheetProjet email ',
-                   to: 'hmidisabrine228@gmail.com'
+                   body: readFile("target/surfire-reports/emailable-report.html"),
+                   mimeType: 'test/html' ;
+                
+                
                   )
          }
 }     
