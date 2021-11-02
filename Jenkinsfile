@@ -14,18 +14,6 @@ pipeline{
         checkout scm
         }
     }
-        stage('Build Maven') {
-            steps{
-             
-                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
-                
-            }
-        }   
- //  stage('Build'){
-    //       steps{
-    //           bat "mvn clean package"
-     //      }
-      //   }
     stage('SonarQube analysis') {
        steps{
         withSonarQubeEnv('SonarQube') { 
@@ -33,17 +21,24 @@ pipeline{
     }
       }
    }
-   stage('Email Notification ') {
-     steps{
-          emailext(
-                    to: 'hmidisabrine228@gmail.com' ,
-                   subject: 'This is the TimesheetProjet email ',
-                   body: 'job failure build '
+         stage('Build Maven') {
+            steps{
+             
+                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                
+            }
+        }   
+ //  stage('Email Notification ') {
+  //   steps{
+      //    emailext(
+             //       to: 'hmidisabrine228@gmail.com' ,
+             //      subject: 'This is the TimesheetProjet email ',
+             //      body: 'job failure build '
                 
                 
-                  )
-         }
-}     
+          //        )
+       //  }
+//}     
     
  
     }
