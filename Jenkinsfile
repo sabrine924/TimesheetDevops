@@ -32,7 +32,7 @@ pipeline{
                    
                    body: 'This is the TimesheetProjet email ',
                    subject: 'This is the TimesheetProjet email ',
-                   to: 'sabrine.hmidi@esprit.tn'
+                   to: 'hmidisabrine228@gmail.com'
                   )
          }
 }     
