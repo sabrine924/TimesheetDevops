@@ -32,7 +32,7 @@ pipeline{
                     to: 'hmidisabrine228@gmail.com' ,
                    subject: 'This is the TimesheetProjet email ',
                    body: readFile("target/surfire-reports/emailable-report.html"),
-                   mimeType: 'test/html' ;
+                   mimeType: 'test/html' 
                 
                 
                   )
