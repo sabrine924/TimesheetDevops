@@ -14,6 +14,13 @@ pipeline{
         checkout scm
         }
     }
+        stage('Build Maven') {
+            steps{
+             
+                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                
+            }
+        }   
  //  stage('Build'){
     //       steps{
     //           bat "mvn clean package"
