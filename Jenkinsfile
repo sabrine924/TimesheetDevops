@@ -110,10 +110,7 @@ pipeline{
         }
               
 } 
-        stage('Email Notification'){
-        mail bcc: '', body: '''Build successful!!!!
-            Thanks,Mahesh''', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'hmidisabrine228@gmail.com'
-}
+      
         
  
     }
