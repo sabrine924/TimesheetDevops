@@ -42,36 +42,36 @@ public class ContratTest {
     private static final Logger l = LogManager.getLogger(ContratTest.class);
 
 
-	/*@Test
+	@Test
 	public void TestAjouterContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2021-10-07"); //date contrat 07 october 2021
-		Contrat contrat = new Contrat(d, "CDD", 500); //type de contrat cdd et salaire 500
+		Date d = dateFormat.parse("2022-10-07"); //date contrat 07 october 2021
+		Contrat contrat = new Contrat(d, "CDD", 3200); //type de contrat cdd et salaire 500
 		int idcontrat = employeServiceImpl.ajouterContrat(contrat);
 
-		assertEquals(6, idcontrat);
+		assertEquals(37, idcontrat);
 	}
 
 	@Test
 	public void testAffecterContratAEmployet() {
 
-		employeServiceImpl.affecterContratAEmploye(3, 7); //contrat id = 2, employe id= 5
-		Employe employe = employeRepoistory.findById(7).get(); 
+		employeServiceImpl.affecterContratAEmploye(37, 1); //contrat id = 2, employe id= 5
+		Employe employe = employeRepoistory.findById(1).get(); 
 		int idContrat = employe.getContrat().getReference();
-		assertEquals(4, idContrat);
+		assertEquals(1, idContrat);
 
 	}
 	
 
 	@Test
 	public void TestDeleteContratById() {
-		Contrat contrat = contratRepoistory.findById(3).get();
+		Contrat contrat = contratRepoistory.findById(37).get();
 		
 		
 		if(contrat.getReference()!=0) {
 	    	
 			employeServiceImpl.deleteContratById(3);
-			assertThat(employeRepoistory.existsById(7)).isFalse();//confirm that employe has beeen deleted
+			assertThat(employeRepoistory.existsById(1)).isFalse();//confirm that employe has beeen deleted
 	    	 }
 	    	 else {
 	    		 assertNull(contrat);
@@ -90,11 +90,11 @@ public class ContratTest {
 	@Test
 	public void tesUpdateContrat() {
 		Contrat contrat = icontratservice.getContratById(7);
-		contrat.setSalaire(600);
+		contrat.setSalaire(3600);
 		int contratId = employeServiceImpl.ajouterContrat(contrat);
 		Contrat updatedcontrat = icontratservice.getContratById(contratId);
 		assertThat(updatedcontrat.getSalaire()).isEqualTo(contrat.getSalaire());
-	}*/
+	}
 	@Test
 	public void testFindContratById() {
 		Contrat contrat = icontratservice.getContratById(7);
