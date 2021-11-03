@@ -45,42 +45,39 @@ public class ContratTest {
 	@Test
 	public void TestAjouterContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2021-10-07"); //date contrat 07 october 2021
+		Date d = dateFormat.parse("2022-10-07"); //date contrat 07 October 2021
 		Contrat contrat = new Contrat(d, "CDD", 500); //type de contrat cdd et salaire 500
 		int idcontrat = employeServiceImpl.ajouterContrat(contrat);
 
-		assertEquals(17, idcontrat);
+		assertEquals(1, idcontrat);
 	}
 
 	@Test
 	public void testAffecterContratAEmployet() {
 
-		employeServiceImpl.affecterContratAEmploye(9,5); //contrat id = 2, employe id= 5
-		Employe employe = employeRepoistory.findById(5).get(); 
+		employeServiceImpl.affecterContratAEmploye(1,1); //contrat id = 2, employe id= 5
+		Employe employe = employeRepoistory.findById(1).get(); 
 		int idContrat = employe.getContrat().getReference();
-		assertEquals(9, idContrat);
+		assertEquals(1, idContrat);
 
 	}
 	
 
-	/*@Test
+	@Test
 	public void TestDeleteContratById() {
-		Contrat contrat = contratRepoistory.findById(3).get();
+		Contrat contrat = contratRepoistory.findById(1).get();
 		
 		
 		if(contrat.getReference()!=0) {
 	    	
 			employeServiceImpl.deleteContratById(3);
-			assertThat(employeRepoistory.existsById(7)).isFalse();//confirm that employe has beeen deleted
+			assertThat(employeRepoistory.existsById(1)).isFalse();//confirm that employe has beeen deleted
 	    	 }
 	    	 else {
 	    		 assertNull(contrat);
 	    	 }
 	
 	}
-
-	
-
 	@Test
 	public void TestdeleteAllContratJPQL() {
 		employeServiceImpl.deleteAllContratJPQL();
@@ -90,7 +87,7 @@ public class ContratTest {
 	@Test
 	public void tesUpdateContrat() {
 		Contrat contrat = icontratservice.getContratById(7);
-		contrat.setSalaire(600);
+		contrat.setSalaire(2100);
 		int contratId = employeServiceImpl.ajouterContrat(contrat);
 		Contrat updatedcontrat = icontratservice.getContratById(contratId);
 		assertThat(updatedcontrat.getSalaire()).isEqualTo(contrat.getSalaire());
@@ -104,5 +101,5 @@ public class ContratTest {
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
 		assertThat(entreprises.size()).isPositive();
-	}*/
+	}
 }
