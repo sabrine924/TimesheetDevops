@@ -54,17 +54,21 @@ public class SocieteServiceImpl implements ISocieteService {
 
 	@Transactional
 	public void deleteSocieteById(int societeId) {
-		societeRepository.delete(societeRepository.findById(societeId).get());	
+		if(societeRepository.findById(societeId).isPresent()){
+		societeRepository.delete(societeRepository.findById(societeId).get());}	
 	}
 
 	@Transactional
 	public void deleteMissionById(int depId) {
-		missionRepository.delete(missionRepository.findById(depId).get());	
+		if(missionRepository.findById(depId).isPresent()){
+		missionRepository.delete(missionRepository.findById(depId).get());	}
 	}
 
 
 	public Societe getSocieteById(int societeId) {
-		return societeRepository.findById(societeId).get();	
+		if(societeRepository.findById(societeId).isPresent()){
+		return societeRepository.findById(societeId).get();	}
+		return null;
 	}
 
 
