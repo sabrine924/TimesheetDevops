@@ -36,9 +36,9 @@ public class SocieteServiceImpl implements ISocieteService {
 				//Rappel : Dans une relation oneToMany le mappedBy doit etre du cote one.
 				Societe societeManagedEntity = societeRepository.findById(societeId).get();
 				Mission missionManagedEntity = missionRepository.findById(missionId).get();
-				
 				missionManagedEntity.setSociete(societeManagedEntity);
 				societeRepository.save(societeManagedEntity);
+				missionRepository.save(missionManagedEntity);
 		
 	}
 	
