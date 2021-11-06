@@ -16,6 +16,23 @@ pipeline{
         checkout scm
         }
     }
+      stage('SonarQube analysis') {
+       steps{
+        withSonarQubeEnv('SonarQube') { 
+       bat "mvn sonar:sonar"
+    }
+      }
+   }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
  
     }
 }
