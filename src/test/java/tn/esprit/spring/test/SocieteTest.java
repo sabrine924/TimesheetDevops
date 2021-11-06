@@ -1,7 +1,7 @@
 package tn.esprit.spring.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -40,16 +40,16 @@ public class SocieteTest {
 	}
 	@Test(timeout= 5000)
 	public void testAffecterMissionASociete(){
-		societeService.affecterMissionASociete(2, 2);
-		Societe societe= societeRepository.findById(2).get();
-		Mission mission= missionRepository.findById(2).get();
-		//assertTrue(mission.getSociete().equals(societe));
+		societeService.affecterMissionASociete(4, 4);
+		Societe societe= societeRepository.findById(4).get();
+		Mission mission= missionRepository.findById(4).get();
+		equals(mission.getSociete().equals(societe));
 	}
 	@Test(timeout= 5000)
 	public void testGetAllMissionsNamesBySociete(){
-		societeService.affecterMissionASociete(2, 2);
+		societeService.affecterMissionASociete(4, 4);
 		List<String> list= new ArrayList<String>();
-		list=societeService.getAllMissionsNamesBySociete(2);
+		list=societeService.getAllMissionsNamesBySociete(4);
 		assertThat(list).size().isGreaterThan(0);
 		
 	}
@@ -61,6 +61,9 @@ public class SocieteTest {
 		List<Societe> listnew= new ArrayList<Societe>();
 		listnew=(List<Societe>) societeRepository.findAll();
 		assertThat(list).size().isGreaterThan(listnew.size());
+		Societe societe= new Societe("soc");
+		societeService.ajouterSociete(societe);
+		
 	}
 
 
