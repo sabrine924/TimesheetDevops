@@ -15,6 +15,10 @@ pipeline{
         checkout scm
         }
     }
+     stage('Test & Jacoco Static Analysis') {
+            junit 'target/surefire-reports/**/*.xml'
+            jacoco()
+        }
     stage('SonarQube analysis') {
        steps{
         withSonarQubeEnv('SonarQube') { 
@@ -98,16 +102,7 @@ pipeline{
             }
 
         }
-          stage('Email Notification ') {
-     steps{
-          emailext(
-                    to: 'hmidisabrine228@gmail.com' ,
-                   subject: 'This is the TimesheetProjet email ',
-                   body: 'job failure build '
-                
-                
-                )
-        }
+       
               
 } 
       
