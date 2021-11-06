@@ -16,8 +16,11 @@ pipeline{
         }
     }
      stage('Test & Jacoco Static Analysis') {
-            junit 'target/surefire-reports/**/*.xml'
+         steps{
+             
+             junit 'target/surefire-reports/**/*.xml'
             jacoco()
+         }     
         }
     stage('SonarQube analysis') {
        steps{
