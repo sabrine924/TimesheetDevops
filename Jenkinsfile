@@ -10,7 +10,7 @@ pipeline{
                 git 'https://github.com/sabrine924/ProjetDevOps.git'
             }
          }        
-    stage('Checkout') {
+   /* stage('Checkout') {
         steps{
         checkout scm
         }
@@ -105,6 +105,7 @@ pipeline{
             }
 
         }
+*/
        
               
 
