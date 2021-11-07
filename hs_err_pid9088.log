@@ -1,0 +1,169 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=9088, tid=19768
+#
+# JRE version:  (8.0_45-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.45-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000029be000):  JavaThread "Unknown thread" [_thread_in_vm, id=19768, stack(0x0000000002a90000,0x0000000002b90000)]
+
+Stack: [0x0000000002a90000,0x0000000002b90000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b57a]
+V  [jvm.dll+0x279873]
+V  [jvm.dll+0x27a509]
+V  [jvm.dll+0x271825]
+V  [jvm.dll+0x1606]
+V  [jvm.dll+0x3f7fb2]
+V  [jvm.dll+0x3f898f]
+V  [jvm.dll+0x3f8a5d]
+V  [jvm.dll+0x3f8c26]
+V  [jvm.dll+0xf2cf2]
+V  [jvm.dll+0x20f0c9]
+V  [jvm.dll+0x240e0a]
+V  [jvm.dll+0x15ba41]
+C  [javaw.exe+0x217e]
+C  [javaw.exe+0xcd17]
+C  [javaw.exe+0xcdab]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000029be000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=19768, stack(0x0000000002a90000,0x0000000002b90000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 56832K, used 983K [0x0000000781300000, 0x0000000785200000, 0x00000007c0000000)
+  eden space 49152K, 2% used [0x0000000781300000,0x00000007813f5c38,0x0000000784300000)
+  from space 7680K, 0% used [0x0000000784a80000,0x0000000784a80000,0x0000000785200000)
+  to   space 7680K, 0% used [0x0000000784300000,0x0000000784300000,0x0000000784a80000)
+ ParOldGen       total 130048K, used 0K [0x0000000703800000, 0x000000070b700000, 0x0000000781300000)
+  object space 130048K, 0% used [0x0000000703800000,0x0000000703800000,0x000000070b700000)
+ Metaspace       used 766K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012050000,0x0000000012640000] byte_map_base: 0x000000000e834000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000058164040
+ Begin Bits: [0x0000000013230000, 0x0000000016150000)
+ End Bits:   [0x0000000016150000, 0x0000000019070000)
+
+Polling page: 0x00000000011e0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002c90000, 0x0000000002f00000, 0x0000000011c90000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.036 loading class java/lang/Short
+Event: 0.036 loading class java/lang/Short done
+Event: 0.036 loading class java/lang/Integer
+Event: 0.036 loading class java/lang/Integer done
+Event: 0.036 loading class java/lang/Long
+Event: 0.036 loading class java/lang/Long done
+Event: 0.036 loading class java/lang/NullPointerException
+Event: 0.036 loading class java/lang/NullPointerException done
+Event: 0.036 loading class java/lang/ArithmeticException
+Event: 0.036 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff76f3f0000 - 0x00007ff76f427000 	C:\Program Files\Java\jdk1.8.0_45\bin\javaw.exe
+0x00007ffe232b0000 - 0x00007ffe234a5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdfb5d0000 - 0x00007ffdfb5e5000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00007ffe21ec0000 - 0x00007ffe21f7e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe20dd0000 - 0x00007ffe21099000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe21da0000 - 0x00007ffe21e4c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe22f30000 - 0x00007ffe22fce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe21f80000 - 0x00007ffe2201b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe22020000 - 0x00007ffe2214a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe216d0000 - 0x00007ffe21871000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe21270000 - 0x00007ffe21292000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe23060000 - 0x00007ffe2308b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe20cc0000 - 0x00007ffe20dcb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe210a0000 - 0x00007ffe2113d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe21170000 - 0x00007ffe21270000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe050f0000 - 0x00007ffe0538a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffe21300000 - 0x00007ffe21330000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000581f0000 - 0x00000000582c2000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\msvcr100.dll
+0x0000000057960000 - 0x00000000581e3000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\server\jvm.dll
+0x00007ffe21d90000 - 0x00007ffe21d98000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe19e90000 - 0x00007ffe19e9a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe08320000 - 0x00007ffe08347000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe1f100000 - 0x00007ffe1f109000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe21e50000 - 0x00007ffe21ebb000 	C:\WINDOWS\System32\WS2_32.dll
+0x0000000057950000 - 0x000000005795f000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\verify.dll
+0x0000000057920000 - 0x0000000057949000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\java.dll
+0x0000000057900000 - 0x0000000057916000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\zip.dll
+0x00007ffe1eef0000 - 0x00007ffe1f0d4000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffe20c30000 - 0x00007ffe20cb3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Dmaven.home=EMBEDDED -Dclassworlds.conf=C:\Users\cito lotfi\Documents\workspace-spring-tool-suite-4-4.9.0.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8828407298615158987.tmp -Dmaven.multiModuleProjectDirectory=E:\5eme\Devops\DEVOPS-main\TimesheetProject -Djansi.force=true -Djansi.passthrough=true -Dfile.encoding=Cp1252 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B clean install -Dstyle.color=always
+java_class_path (initial): D:\spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting\contents\sts-4.9.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_45
+PATH=D:/spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting/contents/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin/server;D:/spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting/contents/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Program Files\Common Files\Oracle\Java\javapath;E:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Windows\System32\cmd.exe;C:\Program Files\nodejs;E:\maven\apache-maven-3.8.1\bin;E:\symfony\Symfony;E:\Git\cmd;C:\Program Files\Java\jdk-14.0.1\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\cito lotfi\anaconda3;C:\Users\cito lotfi\anaconda3\Library\mingw-w64\bin;C:\Users\cito lotfi\anaconda3\Library\usr\bin;C:\Users\cito lotfi\anaconda3\Library\bin;C:\Users\cito lotfi\anaconda3\Scripts;C:\Users\cito lotfi\AppData\Local\Microsoft\WindowsApps;C:\Users\cito lotfi\AppData\Roaming\npm;C:\Users\cito lotfi\.dotnet\tools;C:\Users\cito lotfi\AppData\Local\GitHubDesktop\bin;C:\Users\cito lotfi\AppData\Roaming\Composer\vendor\bin;E:\Microsoft VS Code\bin;D:\spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting\contents\sts-4.9.0.RELEASE;
+USERNAME=cito lotfi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1202)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 12346124k(2689880k free), swap 17064288k(5792k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b15), built on Apr 30 2015 12:40:44 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Nov 07 09:39:31 2021
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

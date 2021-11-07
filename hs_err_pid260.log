@@ -1,0 +1,207 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 199229440 bytes for Failed to commit area from 0x0000000743800000 to 0x000000074f600000 of length 199229440.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3315), pid=260, tid=15056
+#
+# JRE version:  (14.0.1+7) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=61353 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=Timesheet-spring-boot-core-data-jpa-mvc-REST-1 -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application --spring.output.ansi.enabled=always
+
+Host: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz, 8 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Time: Sun Nov  7 09:48:10 2021 Paris, Madrid elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000027c8e3de000):  JavaThread "Unknown thread" [_thread_in_vm, id=15056, stack(0x000000efde300000,0x000000efde400000)]
+
+Stack: [0x000000efde300000,0x000000efde400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f840a]
+V  [jvm.dll+0x741e4a]
+V  [jvm.dll+0x7435ff]
+V  [jvm.dll+0x743c43]
+V  [jvm.dll+0x20d288]
+V  [jvm.dll+0x5f57ba]
+V  [jvm.dll+0x5ea615]
+V  [jvm.dll+0x2c7e9c]
+V  [jvm.dll+0x2c7cd2]
+V  [jvm.dll+0x2cdbbc]
+V  [jvm.dll+0x313ff8]
+V  [jvm.dll+0x313720]
+V  [jvm.dll+0x2a092a]
+V  [jvm.dll+0x2a1a79]
+V  [jvm.dll+0x71f718]
+V  [jvm.dll+0x321c44]
+V  [jvm.dll+0x700b0c]
+V  [jvm.dll+0x392dff]
+V  [jvm.dll+0x394e71]
+C  [jli.dll+0x523b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffdab993078, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000027c8e431800 GCTaskThread "GC Thread#0" [stack: 0x000000efde400000,0x000000efde500000] [id=18956]
+  0x0000027c8e44b800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000efde500000,0x000000efde600000] [id=12300]
+  0x0000027c8e44c800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000efde600000,0x000000efde700000] [id=10936]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdab1c1257]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000027c8e3d7f10] Heap_lock - owner thread: 0x0000027c8e3de000
+
+Heap address: 0x0000000743800000, size: 3016 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.010 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+Event: 0.011 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff634160000 - 0x00007ff63416f000 	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe
+0x00007ffe232b0000 - 0x00007ffe234a5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdfb5d0000 - 0x00007ffdfb5e5000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00007ffe21ec0000 - 0x00007ffe21f7e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe20dd0000 - 0x00007ffe21099000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe21170000 - 0x00007ffe21270000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe1b3f0000 - 0x00007ffe1b408000 	C:\Program Files\Java\jdk-14.0.1\bin\jli.dll
+0x00007ffe1c130000 - 0x00007ffe1c145000 	C:\Program Files\Java\jdk-14.0.1\bin\VCRUNTIME140.dll
+0x00007ffe21da0000 - 0x00007ffe21e4c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe22f30000 - 0x00007ffe22fce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe21f80000 - 0x00007ffe2201b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe22020000 - 0x00007ffe2214a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe216d0000 - 0x00007ffe21871000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe21270000 - 0x00007ffe21292000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe050f0000 - 0x00007ffe0538a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffe23060000 - 0x00007ffe2308b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe20cc0000 - 0x00007ffe20dcb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe210a0000 - 0x00007ffe2113d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe19e90000 - 0x00007ffe19e9a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe21300000 - 0x00007ffe21330000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe182d0000 - 0x00007ffe1836b000 	C:\Program Files\Java\jdk-14.0.1\bin\msvcp140.dll
+0x00007ffdaaf10000 - 0x00007ffdaba2e000 	C:\Program Files\Java\jdk-14.0.1\bin\server\jvm.dll
+0x00007ffe21d90000 - 0x00007ffe21d98000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe1f100000 - 0x00007ffe1f109000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe08320000 - 0x00007ffe08347000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe21e50000 - 0x00007ffe21ebb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe1f260000 - 0x00007ffe1f272000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe1b3e0000 - 0x00007ffe1b3ea000 	C:\Program Files\Java\jdk-14.0.1\bin\jimage.dll
+0x00007ffe1eef0000 - 0x00007ffe1f0d4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe18d50000 - 0x00007ffe18d7c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe20c30000 - 0x00007ffe20cb3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe19560000 - 0x00007ffe19585000 	C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+0x00007ffe1b3c0000 - 0x00007ffe1b3d6000 	C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-14.0.1\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-14.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=61353 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=Timesheet-spring-boot-core-data-jpa-mvc-REST-1 -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application --spring.output.ansi.enabled=always
+java_class_path (initial): E:\5eme\Devops\DEVOPS-main\TimesheetProject\target\classes;C:\Users\cito lotfi\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.1.4.RELEASE\spring-boot-starter-data-jpa-2.1.4.RELEASE.jar;C:\Users\cito lotfi\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.1.4.RELEASE\spring-boot-starter-aop-2.1.4.RELEASE.jar;C:\Users\cito lotfi\.m2\repository\org\springframework\spring-aop\5.1.6.RELEASE\spring-aop-5.1.6.RELEASE.jar;C:\Users\cito lotfi\.m2\repository\org\aspectj\aspectjweaver\1.9.2\aspectjweaver-1.9.2.jar;C:\Users\cito lotfi\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.1.4.RELEASE\spring-boot-starter-jdbc-2.1.4.RELEASE.jar;C:\Users\cito lotfi\.m2\repository\com\zaxxer\HikariCP\3.2.0\HikariCP-3.2.0.jar;C:\Users\cito lotfi\.m2\repository\org\springframework\spring-jdbc\5.1.6.RELEASE\spring-jdbc-5.1.6.RELEASE.jar;C:\Users\cito lotfi\.m2\repository\javax\transaction\javax.transaction-api\1.3\javax.transaction-api-1.3.jar;C:\Users\cito lotfi\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\cito lotfi\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\cito lotfi\.m2\repository\org\hibernate\hibernate-core\5.3.9.Final\hibernate-core-5.3.9.Final.jar;C:\Users\cito lotfi\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\cito lotfi\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\cito lotfi\.m2\repository\org\javassist\javassist\3.23.1-GA\javassist-3.23.1-GA.jar;C:\Users\cito lotfi\.m2\repository\net\bytebuddy\byte-buddy\1.9.12\byte-buddy-1.9.12.jar;C:\Users\cito lotfi\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\cito lotfi\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\cito lotfi\.m2\repository\com\fasterxml\classmate\1.4.0\classmate-1.4.0.jar;C:\Users\cito lotfi\.m2\repository\org
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 199229440                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3162505216                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7549744                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244108496                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 3162505216                             {manageable} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_45
+PATH=D:/spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting/contents/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin/server;D:/spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting/contents/sts-4.9.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Program Files\Common Files\Oracle\Java\javapath;E:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Windows\System32\cmd.exe;C:\Program Files\nodejs;E:\maven\apache-maven-3.8.1\bin;E:\symfony\Symfony;E:\Git\cmd;C:\Program Files\Java\jdk-14.0.1\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\cito lotfi\anaconda3;C:\Users\cito lotfi\anaconda3\Library\mingw-w64\bin;C:\Users\cito lotfi\anaconda3\Library\usr\bin;C:\Users\cito lotfi\anaconda3\Library\bin;C:\Users\cito lotfi\anaconda3\Scripts;C:\Users\cito lotfi\AppData\Local\Microsoft\WindowsApps;C:\Users\cito lotfi\AppData\Roaming\npm;C:\Users\cito lotfi\.dotnet\tools;C:\Users\cito lotfi\AppData\Local\GitHubDesktop\bin;C:\Users\cito lotfi\AppData\Roaming\Composer\vendor\bin;E:\Microsoft VS Code\bin;D:\spring-tool-suite-4-4.9.0.RELEASE-e4.18.0-win32.win32.x86_64.self-extracting\contents\sts-4.9.0.RELEASE;
+USERNAME=cito lotfi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+OS uptime: 0 days 3:47 hours
+HyperV virtualization detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 12056M (2575M free)
+TotalPageFile size 16664M (AvailPageFile size 68M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 58M, peak: 248M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7) for windows-amd64 JRE (14.0.1+7), built on Mar  5 2020 10:30:14 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
