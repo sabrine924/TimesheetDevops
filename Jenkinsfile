@@ -60,7 +60,7 @@ pipeline{
 
                             groupId: 'pom.com.tn.esprit.spring',
 
-                            version: 'pom.2.0',
+                            version: 'pom.1.0',
 
                             repository: 'DevOpsProject',
 
