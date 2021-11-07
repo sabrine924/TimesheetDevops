@@ -55,7 +55,7 @@ pipeline{
 
                             version: 'pom.1.0',
 
-                            repository: 'TimesheetProject',
+                            repository: 'DevOpsProject',
 
                             credentialsId: 'NEXUS_CRED',
 
