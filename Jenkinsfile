@@ -103,15 +103,7 @@ pipeline{
         
         
         
-    stage('Build image') {
-        /* This builds the actual image */
-
-        steps { 
-         build   "softwaredeveloper98/hello-world" 
-              }
-    }    
-        
-        
+    
         
         
         
