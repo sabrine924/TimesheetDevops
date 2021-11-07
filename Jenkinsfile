@@ -18,7 +18,7 @@ pipeline{
     }
                  stage('Build Maven') {
             steps{
-              git branch: 'CodeWithSonarup1', credentialsId: 'TOKEN_NEXUS', url: 'https://github.com/sabrine924/ProjetDevOps.git'
+              git branch: 'CodeWithSonarup1', credentialsId: 'token', url: 'https://github.com/sabrine924/ProjetDevOps.git'
                  bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 
             }
@@ -53,11 +53,11 @@ pipeline{
 
                             groupId: 'pom.com.tn.esprit.spring',
 
-                            version: 'pom.2.0',
+                            version: 'pom.1.0',
 
                             repository: 'DevOpsProject',
 
-                            credentialsId: 'TOKEN_NEXUS',
+                            credentialsId: 'token',
 
                             artifacts: [
 
