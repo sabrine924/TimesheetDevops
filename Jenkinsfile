@@ -16,11 +16,13 @@ pipeline{
         checkout scm
         }
     }
-         stage('Build the artifact'){
+                 stage('Build Maven') {
             steps{
-                bat "mvn clean package"
+              git branch: 'CodeWithSonarup1', credentialsId: 'NEXUS_CRED', url: 'https://github.com/sabrine924/ProjetDevOps.git'
+                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                
             }
-        }
+        }  
      
       stage("Publish to Nexus Repository Manager") {
 
