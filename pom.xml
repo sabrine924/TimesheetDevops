@@ -43,13 +43,12 @@
 
 	</dependencies>
 	  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+  
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
-  
 
         </plugin>
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
@@ -105,7 +104,7 @@
                     <version>0.8.4</version>
                 </plugin>
       </plugins>
-    </pluginManagement>
+
   </build>
 	
 	
