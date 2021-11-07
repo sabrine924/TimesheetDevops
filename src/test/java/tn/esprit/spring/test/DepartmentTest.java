@@ -24,7 +24,7 @@ public class DepartmentTest {
 IDepartement deptService;
 
 private static final Logger l = LogManager.getLogger(DepartmentTest.class);
-///test
+///testtt
 @Test
 public void testaddandgetDepartement() {
 	Departement dept1= new Departement();
