@@ -107,7 +107,7 @@ pipeline{
         /* This builds the actual image */
 
         steps { 
-            app = docker.build("softwaredeveloper98/hello-world")
+         build   "softwaredeveloper98/hello-world" 
               }
     }    
         
