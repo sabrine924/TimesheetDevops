@@ -106,7 +106,9 @@ pipeline{
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("softwaredeveloper98/hello-world")
+        steps { 
+            app = docker.build("softwaredeveloper98/hello-world")
+              }
     }    
         
         
