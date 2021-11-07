@@ -16,6 +16,13 @@ pipeline{
         checkout scm
         }
     }
+           stage('SonarQube analysis') {
+       steps{
+        withSonarQubeEnv('SonarQube') { 
+       bat "mvn sonar:sonar"
+    }
+      }
+   }
                  stage('Build Maven') {
             steps{
               git branch: 'CodeWithSonarup1', credentialsId: 'token_nexus', url: 'https://github.com/sabrine924/ProjetDevOps.git'
