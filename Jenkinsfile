@@ -103,7 +103,10 @@ pipeline{
         
         
         stage('Build Docker Image'){
+            agent any
+      steps {
      bat 'docker build -t softwaredeveloper98/Timesheet-spring-boot-core-data-jpa-mvc-REST-1:latest .'
+      }
    }
     
         
