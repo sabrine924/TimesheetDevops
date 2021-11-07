@@ -57,7 +57,7 @@ pipeline{
 
                             repository: 'DevOpsProject',
 
-                            credentialsId: 'NEXUS_CRED',
+                            credentialsId: 'TOKEN_NEXUS',
 
                             artifacts: [
 
