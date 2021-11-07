@@ -18,7 +18,7 @@ pipeline{
     }
                  stage('Build Maven') {
             steps{
-              git branch: 'CodeWithSonarup1', credentialsId: 'NEXUS_CRED', url: 'https://github.com/sabrine924/ProjetDevOps.git'
+              git branch: 'CodeWithSonarup1', credentialsId: 'TOKEN_NEXUS', url: 'https://github.com/sabrine924/ProjetDevOps.git'
                  bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 
             }
