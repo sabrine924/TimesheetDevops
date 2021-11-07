@@ -16,6 +16,11 @@ pipeline{
         checkout scm
         }
     }
+         stage('Build the artifact'){
+            steps{
+                bat "mvn clean package"
+            }
+        }
      
       stage("Publish to Nexus Repository Manager") {
 
