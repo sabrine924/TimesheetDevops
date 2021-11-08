@@ -31,7 +31,7 @@ pipeline{
             post {
             success {
             jacoco exclusionPattern: '**/*Test*.class', maximumBranchCoverage: '10', maximumInstructionCoverage: '10'
-               junit '**/target/surefire-reports/*.xml'
+               junit '**/target/surefire-reports/**'
             }
          }
         }  
