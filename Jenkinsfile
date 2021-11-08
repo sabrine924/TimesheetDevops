@@ -6,7 +6,7 @@ pipeline{
        
     }
     	tools {
-        jdk "java15"
+        jdk "JDk 1.8"
    }
 
     stages{
