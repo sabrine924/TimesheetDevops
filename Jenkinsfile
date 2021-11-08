@@ -5,9 +5,7 @@ pipeline{
     
        
     }
-    	tools {
-        jdk "jdk-15"
-   }
+ 
 
     stages{
        stage('GetCode'){
