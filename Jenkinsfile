@@ -5,7 +5,7 @@ pipeline{
        
     }
     	tools {
-      jdk "JDk 1.8"
+      jdk "JDk 15"
    }
     stages{
        stage('GetCode'){
