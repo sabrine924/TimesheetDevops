@@ -100,7 +100,13 @@ pipeline{
 
         }
         
-        
+         stage('Build Docker Image'){
+            agent any
+      steps {
+     bat 'docker build -t softwaredeveloper98/Timesheet-spring-boot-core-data-jpa-mvc-REST-1:latest .'
+      }
+   }
+    
         
  
  
@@ -115,4 +121,6 @@ pipeline{
              mail bcc: '', body: 'success text', cc: '', from: '', replyTo: '', subject: 'success', to: 'hmidisabrine228@gmail.com'         
          }
      }
+     
+     
 }
