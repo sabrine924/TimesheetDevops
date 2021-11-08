@@ -135,11 +135,11 @@ pipeline{
     }
     post {
           failure {  
-             mail  color: '#FF0000' , bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: 'Jenkins@gmail.com', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}  ", 
+             mail  bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: 'Jenkins@gmail.com', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}  ", 
              to: "hmidisabrine228@gmail.com" 
          }
           success {
-          mail  color: '#FF0000', bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: 'Jenkins@gmail.com', mimeType: 'text/html', replyTo: '', subject: "SUCCES CI: Project name -> ${env.JOB_NAME}  ", 
+          mail   bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: 'Jenkins@gmail.com', mimeType: 'text/html', replyTo: '', subject: "SUCCES CI: Project name -> ${env.JOB_NAME}  ", 
              to: "hmidisabrine228@gmail.com" 
          }
       
