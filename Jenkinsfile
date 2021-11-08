@@ -25,7 +25,7 @@ pipeline{
    }
                  stage('Build Maven') {
             steps{
-              git branch: 'CodeWithSonarup1', credentialsId: 'token_nexus', url: 'https://github.com/sabrine924/ProjetDevOps.git'
+              git branch: 'main', credentialsId: 'token_nexus', url: 'https://github.com/sabrine924/ProjetDevOps.git'
                  bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 
             }
@@ -102,12 +102,7 @@ pipeline{
         
         
         
-        stage('Build Docker Image'){
-            agent any
-      steps {
-     bat 'docker build -t softwaredeveloper98/Timesheet-spring-boot-core-data-jpa-mvc-REST-1:latest .'
-      }
-   }
+ 
     
         
         
