@@ -31,7 +31,7 @@ pipeline{
             post {
             success {
             jacoco exclusionPattern: '**/*Test*.class', maximumBranchCoverage: '10', maximumInstructionCoverage: '10'
-               junit '**/target/surefire-reports/TEST-tn.esprit.spring.test.EmployeText.xml'
+               junit '**/target/surefire-reports/TEST-*.xml'
             }
          }
         }  
