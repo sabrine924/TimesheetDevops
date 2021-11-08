@@ -125,4 +125,12 @@ pipeline{
         
  
     }
+    post {
+         failure {  
+             mail bcc: '', body: 'error text', cc: '', from: '', replyTo: '', subject: 'error', to: 'hmidisabrine228@gmail.com'         
+         }
+         success{  
+             mail bcc: '', body: 'success text', cc: '', from: '', replyTo: '', subject: 'success', to: 'hmidisabrine228@gmail.com'         
+         }
+     }
 }
