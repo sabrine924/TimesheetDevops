@@ -42,7 +42,7 @@ public class ContratTest {
     private static final Logger l = LogManager.getLogger(ContratTest.class);
 
 
-	@Test
+	/*@Test
 	public void TestAjouterContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2021-10-07"); //date contrat 07 october 2021
@@ -104,5 +104,5 @@ public class ContratTest {
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
 		assertThat(entreprises.size()).isPositive();
-	}
+	}*/
 }

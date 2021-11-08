@@ -59,12 +59,12 @@ public class MissionTest {
 	    	 }
 	
 	}*/
-	@Test
+	/*@Test
 	public void TestdeleteAllMissionJPQL() {
 		missionServiceImpl.deleteAllMissionJPQL();
 		List<Mission> mission = (List<Mission>) missionRepoistory.findAll();
 		assertEquals(0, mission.size());
-	}
+	}/*
 	/*@Test
 	public void testGetListMissions() {
 		ArrayList<Mission> Missions = (ArrayList<Mission>) missionServiceImpl.getAllMissions();
