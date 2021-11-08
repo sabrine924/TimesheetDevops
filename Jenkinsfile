@@ -4,6 +4,9 @@ pipeline{
        PATH = "$PATH:C:/Users/user/Desktop/apache-maven-3.8.1/bin"
        
     }
+    	tools {
+      jdk "Java8"
+   }
     stages{
        stage('GetCode'){
             steps{
