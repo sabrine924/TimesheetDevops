@@ -43,35 +43,36 @@ public class ContratTest {
 
 
 	@Test
-	public void TestAjouterContrat() throws ParseException {
+	public void TestAddContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2021-10-07"); //date contrat 07 october 2021
 		Contrat contrat = new Contrat(d, "CDD", 500); //type de contrat cdd et salaire 500
-		employeServiceImpl.ajouterContrat(contrat);
+	int idcontrat = employeServiceImpl.ajouterContrat(contrat);
 
-		//assertEquals(83, idcontrat);
+		assertEquals(23, idcontrat);
+		l.info("contrat a ete ajoute  " + idcontrat);
 	}
 
-	/*@Test
+	@Test
 	public void testAffecterContratAEmployet() {
 
-		employeServiceImpl.affecterContratAEmploye(9,5); //contrat id = 2, employe id= 5
-		Employe employe = employeRepoistory.findById(5).get(); 
+		employeServiceImpl.affecterContratAEmploye(23,2); //contrat id = 2, employe id= 5
+		Employe employe = employeRepoistory.findById(2).get(); 
 		int idContrat = employe.getContrat().getReference();
-		assertEquals(9, idContrat);
+		assertEquals(23, idContrat);
 
 	}
 	
 
 @Test
 	public void TestDeleteContratById() {
-		Contrat contrat = contratRepoistory.findById(3).get();
+		Contrat contrat = contratRepoistory.findById(22).get();
 		
 		
 		if(contrat.getReference()!=0) {
 	    	
-			employeServiceImpl.deleteContratById(3);
-			assertThat(employeRepoistory.existsById(7)).isFalse();//confirm that employe has beeen deleted
+			employeServiceImpl.deleteContratById(1);
+			assertThat(employeRepoistory.existsById(1)).isFalse();//confirm that employe has beeen deleted
 	    	 }
 	    	 else {
 	    		 assertNull(contrat);
@@ -89,7 +90,7 @@ public class ContratTest {
 	}
 	@Test
 	public void tesUpdateContrat() {
-		Contrat contrat = icontratservice.getContratById(7);
+		Contrat contrat = icontratservice.getContratById(22);
 		contrat.setSalaire(600);
 		int contratId = employeServiceImpl.ajouterContrat(contrat);
 		Contrat updatedcontrat = icontratservice.getContratById(contratId);
@@ -97,12 +98,12 @@ public class ContratTest {
 	}
 	@Test
 	public void testFindContratById() {
-		Contrat contrat = icontratservice.getContratById(7);
-		assertThat(contrat.getReference()).isEqualTo(7);
+		Contrat contrat = icontratservice.getContratById(22);
+		assertThat(contrat.getReference()).isEqualTo(22);
 	}
 	@Test
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
 		assertThat(entreprises.size()).isPositive();
-	}*/
+	}
 }

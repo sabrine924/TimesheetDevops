@@ -118,7 +118,7 @@ public class EmployeTest {
 	}
 	
 	
-	@Test
+/*	@Test
 	public void testAjouterContrat(){
 		Date d=new Date(12-01-2021);
 		Contrat cont = new Contrat(d,"CDI", 120.3f);
@@ -127,9 +127,9 @@ public class EmployeTest {
         assertEquals(cont.getReference(), id);
         l.info("reference not null", +id);
         contratRepository.deleteAll();
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void testAffecterContratAEmploye(){
 		Date d=new Date(12-01-2021);
 		Contrat cont = new Contrat(d,"CDI", 120.3f);
@@ -141,7 +141,7 @@ public class EmployeTest {
 		contratRepository.deleteAll();
 		employeServImp.deleteEmployeById(empId);
 	}
-	
+	*/
 	@Test
 	public void testGetEmployePrenomById(){
 		Employe emp  = new Employe("kallel","khaled","Khaled.kallel@ssiiconsulting.tn",true,Role.INGENIEUR);
