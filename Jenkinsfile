@@ -2,9 +2,12 @@ pipeline{
     agent any
     environment {
        PATH = "$PATH:C:/Users/user/Desktop/apache-maven-3.8.1/bin"
-       jdk "jdk-15"
+    
        
     }
+    	tools {
+         jdk "jdk-15"
+   }
 
     stages{
        stage('GetCode'){
