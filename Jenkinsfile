@@ -95,14 +95,7 @@ pipeline{
             }
 
         }
-        
-         stage('Build Docker Image'){
-            agent any
-      steps {
-     bat 'docker build -t softwaredeveloper98/Timesheet-spring-boot-core-data-jpa-mvc-REST-1:latest .'
-      }
-   }
-    
+
         
  
  
@@ -110,7 +103,7 @@ pipeline{
     }
     post {
           always {  
-             mail bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}  ", 
+             mail bcc: '', body: "Result : ${currentBuild.currentResult}<br> JOB : ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL} <br> ", cc: '', charset: 'UTF-8', from: 'Jenkins@gmail.com', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}  ", 
              to: "hmidisabrine228@gmail.com" 
          }
       
