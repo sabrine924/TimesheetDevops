@@ -1129,3 +1129,33 @@
 2021-11-08 22:53:07.386  INFO 18352 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-11-08 22:53:07.902  INFO 18352 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-08 22:53:07.933  INFO 18352 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-08 23:34:40.150  INFO 18160 --- [main] tn.esprit.spring.test.EmployeTest        : Starting EmployeTest on DESKTOP-0AERG9V with PID 18160 (started by user in C:\Users\user\Desktop\projetdevops\ProjetDevOps)
+2021-11-08 23:34:40.150  INFO 18160 --- [main] tn.esprit.spring.test.EmployeTest        : No active profile set, falling back to default profiles: default
+2021-11-08 23:34:41.115  INFO 18160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-08 23:34:41.218  INFO 18160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 6 repository interfaces.
+2021-11-08 23:34:41.659  INFO 18160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7d82d60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-08 23:34:41.954  INFO 18160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-08 23:34:42.154  INFO 18160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-08 23:34:42.307  INFO 18160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-08 23:34:42.479  INFO 18160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-08 23:34:42.479  INFO 18160 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-08 23:34:42.740  INFO 18160 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-08 23:34:43.366  INFO 18160 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-08 23:34:44.565  INFO 18160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 23:34:45.072  INFO 18160 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-08 23:34:46.946  INFO 18160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-08 23:34:47.071  WARN 18160 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-08 23:34:47.873  INFO 18160 --- [main] tn.esprit.spring.test.EmployeTest        : Started EmployeTest in 8.066 seconds (JVM running for 9.179)
+2021-11-08 23:34:48.139  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : des affecter Employe Du Departement
+2021-11-08 23:34:48.341  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : employe a ete ajoute  27
+2021-11-08 23:34:48.419  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : Prenom :
+2021-11-08 23:34:48.466  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : it'sNourhen.allagui@gmail.com
+2021-11-08 23:34:48.466  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : compatible  Nourhen.allagui@gmail.com
+2021-11-08 23:34:48.510  INFO 18160 --- [main] t.e.spring.services.EmployeServiceImpl   : cc [tn.esprit.spring.entities.Employe@32c0fecc]
+2021-11-08 23:34:48.664  INFO 18160 --- [main] tn.esprit.spring.test.ContratTest        : contrat a ete ajoute  9
+2021-11-08 23:34:48.695  INFO 18160 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-08 23:34:48.695  INFO 18160 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-08 23:34:48.695  INFO 18160 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-08 23:34:48.695  INFO 18160 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

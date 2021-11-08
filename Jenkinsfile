@@ -30,8 +30,9 @@ pipeline{
             }
             post {
             success {
-           jacoco exclusionPattern: '**/*Test*.class'
-               junit '**/target/surefire-reports/**/*.xml'
+          
+               jacoco classPattern: "**/classes", sourcePattern: "**/src/main/java"
+               
 
             }
          }
