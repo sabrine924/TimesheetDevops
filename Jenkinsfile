@@ -1,6 +1,9 @@
 pipeline{
     agent any
-   
+    environment {
+       PATH = "$PATH:C:/Users/user/Desktop/apache-maven-3.8.1/bin"
+       
+    }
     stages{
        stage('GetCode'){
             steps{
@@ -8,11 +11,7 @@ pipeline{
             }
          }        
   
-         stage('Checkout') {
-        steps{
-        checkout scm
-        }
-    }
+ 
            stage('SonarQube analysis') {
        steps{
         withSonarQubeEnv('SonarQube') { 
