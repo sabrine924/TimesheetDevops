@@ -75,11 +75,11 @@ public class ContratTest {
 		Contrat contrat = icontratservice.getContratById(3);
 		assertThat(contrat.getReference()).isEqualTo(3);
 	}
-	@Test
+	/*@Test
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
 		assertThat(entreprises.size()).isPositive();
-	}
+	}*/
 
 /*@Test
 	public void TestDeleteContratById() {
