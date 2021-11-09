@@ -20,7 +20,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,16 +50,17 @@ public class ContratTest {
 	int idcontrat = employeServiceImpl.ajouterContrat(contrat);
 
 		//assertEquals(4, idcontrat);
-		l.info("contrat a ete ajoute  " + idcontrat);
+		l.info("contrat a ete ajoute avec id : " + idcontrat);
 	}
 
 	/*@Test
 	public void testAffecterContratAEmployet() {
 
-		employeServiceImpl.affecterContratAEmploye(3,1); //contrat id = 2, employe id= 5
+		employeServiceImpl.affecterContratAEmploye(1,5); //contrat id = 2, employe id= 5
 		Employe employe = employeRepoistory.findById(1).get(); 
 		int idContrat = employe.getContrat().getReference();
 		assertEquals(1, idContrat);
+		  l.info("idContrat not null", +idContrat);
 
 	}*/
 	@Test
@@ -75,15 +76,16 @@ public class ContratTest {
 		Contrat contrat = icontratservice.getContratById(3);
 		assertThat(contrat.getReference()).isEqualTo(3);
 	}
-	/*@Test
+	@Test
 	public void testGetListContrats() {
 		ArrayList<Contrat> entreprises = (ArrayList<Contrat>) icontratservice.getAllContrats();
 		assertThat(entreprises.size()).isPositive();
-	}*/
+		  l.info("You can see your entreprises list :) ");
+	}
 
-/*@Test
+ /*@Test
 	public void TestDeleteContratById() {
-		Contrat contrat = contratRepoistory.findById(4).get();
+		Contrat contrat = contratRepoistory.findById(6).get();
 		
 		
 		if(contrat.getReference()!=0) {
